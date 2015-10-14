@@ -58,6 +58,7 @@ extern Gatefunc opencv_houghlinesp;
 extern Gatefunc opencv_gray2ind;
 extern Gatefunc opencv_imfuse;
 extern Gatefunc opencv_imshowpair;
+extern Gatefunc opencv_wiener2;
 static GenericTable Tab[]={
   {(Myinterfun)sci_gateway_without_putlhsvar,opencv_imread,"imread"},
   {(Myinterfun)sci_gateway_without_putlhsvar,opencv_blur,"blur"},
@@ -111,6 +112,7 @@ static GenericTable Tab[]={
   {(Myinterfun)sci_gateway_without_putlhsvar,opencv_gray2ind,"gray2ind"},
   {(Myinterfun)sci_gateway_without_putlhsvar,opencv_imfuse,"imfuse"},
   {(Myinterfun)sci_gateway_without_putlhsvar,opencv_imshowpair,"imshowpair"},
+  {(Myinterfun)sci_gateway_without_putlhsvar,opencv_wiener2,"wiener2"},
 };
  
 int C2F(libskeleton_imageprocessing)()

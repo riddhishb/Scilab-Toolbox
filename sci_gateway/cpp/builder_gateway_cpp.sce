@@ -53,6 +53,7 @@ names = [
             "gray2ind", "opencv_gray2ind";
 	    "imfuse" , "opencv_imfuse";
           "imshowpair","opencv_imshowpair";
+          "wiener2","opencv_wiener2"
 		];
 
 files = [
@@ -108,6 +109,7 @@ files = [
 	    "opencv_gray2ind.cpp",
 	    "opencv_imfuse.cpp",
           "opencv_imshowpair.cpp"
+          "opencv_wiener2.cpp"
 		];
 
 function builder_gw_cpp()

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="wiener2" xml:lang="en_US"
+					xmlns="http://docbook.org/ns/docbook"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					xmlns:svg="http://www.w3.org/2000/svg"
+					xmlns:ns3="http://www.w3.org/1999/xhtml"
+					xmlns:mml="http://www.w3.org/1998/Math/MathML"
+					xmlns:db="http://docbook.org/ns/docbook">
+
+	<refnamediv>
+		<refname>wiener2</refname>
+
+		<refpurpose>Applies adaptive wiener filter on a grayscale image for denoising</refpurpose>
+	</refnamediv>
+
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+
+		<synopsis>
+			input_image = imread(filepath) // the image should be grayscale and if possible noisy	
+			output_image = wiener2(input_image, int kernal_size, double noise_var);</synopsis>
+	</refsynopsisdiv>
+	
+	<refsection>
+   		<title>Arguments</title>
+		<variablelist>
+			<varlistentry><term>input_image: </term>
+				<listitem><para>the input image</para></listitem>
+			</varlistentry>
+			<varlistentry><term>kernal_size: </term>
+				<listitem><para>it applies the filter on the local patch of size kernal_size x kernal_size</para></listitem>
+			</varlistentry>
+			<varlistentry><term>noise_var: </term>
+				<listitem><para>The noise variance of the present noise in the input image, if the noise variance is unknown just put it to be 0, the function would estimate the noise variance on it's own.</para></listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
+	
+	<refsection>
+		<title>Description</title>
+		<para>
+			The function computes the well known wiener filter on a local patch and assigns the filtered output to the corrosponding pixel value in the output image.
+
+		</para>
+	</refsection>
+
+	<refsection>
+		<title>Example</title>
+		<programlisting role="example"><![CDATA[
+							a = imread("noise.png");
+							b= wiener2(a,5,0.01); 
+							imshow(b);
+   		]]></programlisting>
+	</refsection>
+
+	<refsection>
+		<title>Authors</title>
+
+		<simplelist type="vert">
+			<member>Riddhish Bhalodia</member>
+		</simplelist>
+	</refsection>
+</refentry>
